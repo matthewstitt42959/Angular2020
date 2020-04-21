@@ -12,10 +12,12 @@
         <div class="row">
             <div class="col-sm-6 offset-sm-3">
                 <alert></alert>
-<nav>
-  <a routerLinkActive="active" routerLink="/employees-list">View Employees</a>
+<mat-toolbar>
+ <span> <a routerLinkActive="active" routerLink="/employees-list">View Employees</a>
   <a routerLinkActive="active" routerLink="/create-employee">Add Employee</a>
-</nav>
+   <a routerLinkActive="active" routerLink="/login">Home</a> </span>
+  
+</mat-toolbar>
                 <router-outlet></router-outlet>
             </div>
         </div>

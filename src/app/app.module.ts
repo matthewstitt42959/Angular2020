@@ -1,4 +1,4 @@
-import { NgModule }      from '@angular/core';
+import {  ModuleWithProviders, NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule }    from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -19,14 +19,15 @@ import { EmployeeEditComponent } from './_components/employee/employee-edit/empl
 import { EmployeeListComponent } from './_components/employee/employee-list/employee-list.component';
 // Add Angualr Material _components
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatInputModule,MatOptionModule, MatSelectModule, MatIconModule} from '@angular/material';
+
+
+
 @NgModule({
     imports: [
         HttpClientModule,
         routing,
         BrowserModule,
         BrowserAnimationsModule,
-        MatInputModule,MatOptionModule, MatSelectModule, MatIconModule,
         FormsModule,
         ReactiveFormsModule
     ],
