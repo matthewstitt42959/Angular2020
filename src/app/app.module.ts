@@ -19,7 +19,7 @@ import { EmployeeEditComponent } from './_components/employee/employee-edit/empl
 import { EmployeeListComponent } from './_components/employee/employee-list/employee-list.component';
 // Add Angualr Material _components
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+import { MaterialModule } from './material/material.module';
 
 
 @NgModule({
@@ -29,7 +29,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
         BrowserModule,
         BrowserAnimationsModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MaterialModule
     ],
     declarations: [
         AppComponent,
