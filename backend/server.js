@@ -1,9 +1,10 @@
 let express = require('express'),
    path = require('path'),
-   mongoose = require('mongoose'),
    cors = require('cors'),
    bodyParser = require('body-parser'),
    dbConfig = require('./database/db');
+
+let mongoose = require('mongoose');
 
 // Connecting with mongo db
 mongoose.Promise = global.Promise;
@@ -25,8 +26,8 @@ app.use(bodyParser.urlencoded({
    extended: false
 }));
 app.use(cors()); 
-app.use(express.static(path.join(__dirname, 'dist/mean-stack-crud-app')));
-app.use('/', express.static(path.join(__dirname, 'dist/mean-stack-crud-app')));
+app.use(express.static(path.join(__dirname, 'dist/CICTestingApp')));
+app.use('/', express.static(path.join(__dirname, 'dist/CICTestingApp')));
 app.use('/api', employeeRoute)
 
 // Create port
