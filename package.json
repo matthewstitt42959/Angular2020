@@ -1,11 +1,14 @@
 {
   "name": "cictesting-app",
   "version": "0.0.0",
+  "repository": {
+        "type": "git",
+        "url": "https://git@github.com:matthewstitt42959/Angular2020.git"
+    },
   "scripts": {
-    "webpack" : "webpack",
-    "dev": "npm run webpack -- --mode development --watch",
-    "build": "npm run webpack -- --mode production"
-},
+        "start": "node ./server.js",
+        "start-dev": "nodemon ./server.js"
+    },
   "private": true,
   "dependencies": {
     "@angular/animations": "^9.0.7",
