@@ -1,22 +1,67 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+  "name": "cictesting-app",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://git@github.com:matthewstitt42959/Angular2020.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+   "scripts": {
+    "start": "node server.js"
+    
+  },
+  "private": true,
   "dependencies": {
+    "@angular/animations": "^9.0.7",
+    "@angular/cdk": "^9.2.1",
+    "@angular/common": "^9.1.2",
+    "@angular/compiler": "^9.0.7",
+    "@angular/core": "^9.1.2",
+    "@angular/forms": "^9.0.7",
+    "@angular/material": "^9.2.1",
+    "@angular/platform-browser": "^9.0.7",
+    "@angular/platform-browser-dynamic": "^9.0.7",
+    "@angular/router": "^9.0.7",
+    "@types/angular-material": "^1.1.71",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.9.10"
+    "mongoose": "^5.9.5",
+    "node-gyp": "^6.1.0",
+    "rxjs": "~6.5.4",
+    "tslib": "^1.10.0",
+    "zone.js": "^0.10.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "@angular-devkit/build-angular": "^0.900.7",
+    "@angular/cli": "^9.0.7",
+    "@angular/compiler-cli": "^9.0.7",
+    "@angular/language-service": "^9.0.7",
+    "@types/jasmine": "^3.5.9",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^11.15.7",
+    "angular2-template-loader": "^0.6.2",
+    "codelyzer": "^5.1.2",
+    "html-webpack-plugin": "^3.2.0",
+    "jasmine-core": "~3.5.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~4.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "~2.1.0",
+    "karma-jasmine": "~2.0.1",
+    "karma-jasmine-html-reporter": "^1.4.2",
+    "nodemon": "^2.0.2",
+    "protractor": "~5.4.3",
+    "raw-loader": "^1.0.0",
+    "ts-loader": "^5.4.5",
+    "ts-node": "~8.3.0",
+    "tslint": "~5.18.0",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "engines": {
+    "node": "12.16.x",
+    "npm": "6.x"
   }
 }
