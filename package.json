@@ -6,9 +6,9 @@
     "url": "https://git@github.com:matthewstitt42959/Angular2020.git"
   },
   "scripts": {
-    "start": "node ../server.js",
-    "start-dev": "nodemon ../server.js"
-  },
+        "start": "node ./server.js",
+        "start-dev": "nodemon ./server.js"
+    },
   "private": true,
   "dependencies": {
     "@angular/animations": "^9.0.7",
