@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "webpack" : "webpack", // invoke this command from npm run dev & npm run build
+    "webpack" : "webpack",
     "start": "webpack-dev-server --mode development --open",
     "dev": "npm run webpack -- --mode development --watch",
     "build": "webpack --mode production",
