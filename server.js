@@ -1,49 +1,26 @@
-let express = require('express'),
-   path = require('path'),
-   cors = require('cors'),
-   bodyParser = require('body-parser'),
-   dbConfig = require('./database/db');
-
-let mongoose = require('mongoose');
-
-// Connecting with mongo db
-mongoose.Promise = global.Promise;
-mongoose.connect(dbConfig.db, {
-   useNewUrlParser: true
-}).then(() => {
-      console.log('Database sucessfully connected')
-   },
-   error => {
-      console.log('Database could not connected: ' + error)
-   }
-)
-
-// Setting up port with express js
-const employeeRoute = require('../backend/routes/employee.route')
+require('rootpath')();
+const express = require('express');
 const app = express();
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const jwt = require('_helpers/jwt');
+const errorHandler = require('_helpers/error-handler');
+
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-   extended: false
-}));
-app.use(cors()); 
-app.use(express.static(path.join(__dirname, 'dist/CICTestingApp')));
-app.use('/', express.static(path.join(__dirname, 'dist/CICTestingApp')));
-app.use('/api', employeeRoute)
+app.use(cors());
 
-// Create port
-const port = process.env.PORT || 4000;
-const server = app.listen(port, () => {
-  console.log('Connected to port ' + port)
-})
+// use JWT auth to secure the api
+app.use(jwt());
 
-// Find 404 and hand over to error handler
-app.use((req, res, next) => {
-   next(createError(404));
-});
+// api routes
+app.use('/users', require('./users/users.controller'));
 
-// error handler
-app.use(function (err, req, res, next) {
-  console.error(err.message); // Log error message in our server's console
-  if (!err.statusCode) err.statusCode = 500; // If err has no specified error code, set error code to 'Internal Server Error (500)'
-  res.status(err.statusCode).send(err.message); // All HTTP requests must have a response, so let's send back an error with its status code and message
+// global error handler
+app.use(errorHandler);
+
+// start server
+const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 4000;
+const server = app.listen(port, function () {
+    console.log('Server listening on port ' + port);
 });
