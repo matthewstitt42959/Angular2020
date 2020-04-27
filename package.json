@@ -6,8 +6,13 @@
     "url": "https://git@github.com:matthewstitt42959/Angular2020.git"
   },
    "scripts": {
-    "start": "node server.js"
-    
+    "ng": "ng",
+    "start": "node server.js",
+    "build": "ng build --prod",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
