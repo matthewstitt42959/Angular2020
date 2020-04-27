@@ -14,7 +14,7 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 export class EmployeeEditComponent implements OnInit {
   submitted = false;
   editForm: FormGroup;
-  employeeData: Employee[];
+//  employeeData: Employee[];
   EmployeeProfile: any = ['Finance', 'BDM', 'HR', 'Sales', 'Admin']
 
   constructor(
